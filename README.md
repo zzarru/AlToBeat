@@ -23,3 +23,28 @@
         ➕ 20회차 벌금 20,000원  
     🌀 매월 모인 벌금은 해당 월 **우수 스터디원에게 지급** 🥇  
       (공동 1등이 발생할 경우, 총 벌금 // 우수 팀원 수 ➡️ 분할 지급)  
+
+## 📌 Github 사용방법
+    1. 이 레포지토리를 각자 `folk`한다.
+    2. 생선된 원격 레포지토리에서 `브랜치(Github-ID)`를 생성한다. 
+    3. 해당 브랜치에서 `Github-ID`로 된 폴더를 생성한다.
+    4. 다음날 새벽 두시까지 소스코드를 `Commit-Convention`을 따라서 커밋한다. (1일 1커밋)
+    5. 원본 저장소로 `Pull Requests`를 한다. 
+
+## 📌 Convention
+### 1️⃣ Project Convention  
+    각 팀원 별 프로젝트 구조는 다음과 같다.  
+    `github-ID/week번호/플랫폼_문제번호_난이도_문제이름.py`
+    
+    플랫폼 표기
+    BOJ - 백준 / PGS - 프로그래머스 / LTC - 리트코드 / CFS - 코드포스 / SWEA - 삼성 SW Expert Academy / ETC - 그외
+
+### 2️⃣ Commit Convention
+    소스코드 파일명과 동일합니다. 
+    ex. BOJ 1051 S3 숫자정사각형
+
+### 3️⃣ PR Convention
+    github-ID/week번호/상세날짜
+    ex. zzarru/week1/240108
+
+    
