@@ -93,3 +93,56 @@ for i in range(len(lst)-1,-1,-1): #len(lst)-1 : 7번 인덱스 부터 시작, 0�
 
 print(result) # [0,1,1,1,2,3,4,4]
 ```
+
+---
+
+## 선택정렬(Selection Sort)
+
+원소들 중 가장 작은 값부터 차례대로 선택해서 위치를 교환하는 방식
+
+리스트 중에서 최소값을 찾은 뒤 그 값을 가장 앞의 값과 교환
+
+가장 처음 위치를 제외한 나머지 리스트를 대상으로 위의 과정을 반복
+
+시간복잡도 : O(n^2)
+
+```python
+def selection_sort(lst):
+	length=len(lst)
+	for i in range(length-1): #length-1 이유 : 정렬을 끝내고 마지막 N-1번째 인덱스만 남으면
+		minidx=i                #                자연스럽게 가장 큰 수가 마지막에 남게 됨
+		for j in range(i+1,length):
+			if a[minidx]>a[j]:
+				minidx=j
+		a[i],a[minidx]=a[minidx],a[i]
+```
+
+---
+
+## 퀵 정렬(Quick Sort)
+
+분할 정복과 재귀를 이용한 정렬 알고리즘
+
+pivot이라고 불리는 임의의 값을 선택해서 pivot을 기준으로 더 작은 값의 그룹과 큰 값의 그룹으로 나누어준다.
+
+재귀를 사용해서 리스트를 계속 새로운 pivot을 기준으로 쪼개고, 분할했던 값들을 모두 합치면 정렬된 리스트를 얻을 수 있다.
+
+이상적인 경우(적절한 pivot을 선택)했을 때는 O(NlogN)의 시간복잡도를 가진다.
+
+최악의 경우에는 한쪽에만 모든 값이 쏠리며 O(N^2)의 복잡도를 가지게 된다.
+
+```python
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    lesser_arr, equal_arr, greater_arr = [], [], []
+    for num in arr:
+        if num < pivot:
+            lesser_arr.append(num)
+        elif num > pivot:
+            greater_arr.append(num)
+        else:
+            equal_arr.append(num)
+    return quick_sort(lesser_arr) + equal_arr + quick_sort(greater_arr)
+```
