@@ -146,3 +146,75 @@ def quick_sort(arr):
             equal_arr.append(num)
     return quick_sort(lesser_arr) + equal_arr + quick_sort(greater_arr)
 ```
+
+---
+
+## 병합 정렬(Merge Sort)
+
+분할정복과 재귀를 사용한 정렬 알고리즘
+
+주어진 배열을 계속 쪼개다가 원소가 하나가 남게 되면, 크기순으로 재배열 하며 원래 크기의 배열이 되도록 만든다.
+
+시간복잡도는 최악의 경우라도 O(NlogN)의 효율성을 가진다.
+
+```python
+def merge_sort(arr):
+    if len(arr) < 2:
+        return arr
+
+    mid = len(arr) // 2
+    low_arr = merge_sort(arr[:mid])
+    high_arr = merge_sort(arr[mid:])
+
+    merged_arr = []
+    l = h = 0
+    while l < len(low_arr) and h < len(high_arr):
+        if low_arr[l] < high_arr[h]:
+            merged_arr.append(low_arr[l])
+            l += 1
+        else:
+            merged_arr.append(high_arr[h])
+            h += 1
+    merged_arr += low_arr[l:]
+    merged_arr += high_arr[h:]
+    return merged_arr
+```
+
+-> arr[start:end] 와 같이 slice notation을 사용하면 배열의 복제로 인해 메모리 효율이 낮아진다.
+
+해당 문제를 해결하기 위해 인덱스 접근을 사용해서 메모리를 효율적으로 사용할 수 있다.
+
+```python
+def merge_sort(arr):
+    def sort(low, high):
+        if high - low < 2:
+            return
+        mid = (low + high) // 2
+        sort(low, mid)
+        sort(mid, high)
+        merge(low, mid, high)
+
+    def merge(low, mid, high):
+        temp = []
+        l, h = low, mid
+
+        while l < mid and h < high:
+            if arr[l] < arr[h]:
+                temp.append(arr[l])
+                l += 1
+            else:
+                temp.append(arr[h])
+                h += 1
+
+        while l < mid:
+            temp.append(arr[l])
+            l += 1
+        while h < high:
+            temp.append(arr[h])
+            h += 1
+
+        for i in range(low, high):
+            arr[i] = temp[i - low]
+
+    return sort(0, len(arr))
+```
