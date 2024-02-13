@@ -70,4 +70,5 @@
 | week 3 | 정렬 (Sort) | - | - |
 | week 4 | 문자열 (String) | - | - |
 | week 5 | 스택 (Stack) | - | - |
+| week 6 | 너비우선탐색 (BFS) | - | - |
     
