@@ -30,3 +30,65 @@ def bfs(graph, start_node, visited):
                 q.append(node)
                 visited[node] = 1
 ```
+
+### BFS 예시 - 그래프에서 이동 경로 찾기
+
+|       | **1** | **2** | **3** | **4** | **5** |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| **1** | x     | x     | o     | x     | o     |
+| **2** | x     | x     | x     | o     | x     |
+| **3** | o     | x     | x     | o     | o     |
+| **4** | x     | o     | o     | x     | x     |
+| **5** | o     | x     | o     | x     | x     |
+
+해당 그래프는 아래와 같은 양방향 간선으로 연걸되어 있다.
+
+```markdown
+1 - 3 / 1 - 5 / 2 - 4 / 3 - 4 / 3 - 5
+```
+
+해당 그래프에서 1번 노드에서부터 시작하는 bfs를 진행하면 아래와 같은 결과가 나온다.
+
+```python
+from collections import deque
+
+# 노드의 갯수, 간선의 수
+n, m = map(int, input().split())
+
+graph = [[0 for _ in range(n + 1)]for _ in range(n + 1)]
+for _ in range(m):
+    start, end = map(int, input().split())
+    graph[start][end] = 1
+    graph[end][start] = 1
+
+# 1번 노드부터 bfs를 시작한다.
+q = deque([1])
+visited = [0 for _ in range(n + 1)]
+visited[1] = 1
+while q:
+    current_node = q.popleft()
+    print(current_node)
+    for next_node in range(1, n + 1):
+        if graph[current_node][next_node] and not visited[next_node]:
+            q.append(next_node)
+            visited[next_node] = 1
+
+# 입력
+# 5 4
+# 1 3
+# 1 5
+# 2 4
+# 3 4
+# 3 5
+
+# 결과
+# 1
+# 3
+# 5
+# 4
+# 2
+```
+
+해당 그래프에서 1번 노드에서 부터 이동을 시작하면
+
+1 - 3 - 5 - 4 - 2 순서로 이동하는 것을 확인할 수 있다.
