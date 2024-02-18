@@ -69,6 +69,7 @@
 | week 2 | 입출력 (Input & Output) | - | - |
 | week 3 | 정렬 (Sort) | - | - |
 | week 4 | 문자열 (String) | - | - |
-| week 5 | 스택 (Stack) | - | - |
+| week 5 | 동적계획법 (DP) | - | - |
 | week 6 | 너비우선탐색 (BFS) | - | - |
+| week 7 | 스택 (Stack) | - | - |
     
