@@ -2,7 +2,7 @@
 200만개까지의 악의적인 테스트케이스가 도사리고 있으므로,
 빠른 입력을 받음으로 시간을 줄여주었다.
 '''
-
+ 
 from collections import deque
 import sys
 input = sys.stdin.readline
