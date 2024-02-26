@@ -72,4 +72,5 @@
 | week 5 | 동적계획법 (DP) | - | - |
 | week 6 | 너비우선탐색 (BFS) | - | - |
 | week 7 | 스택 (Stack) | - | - |
+| week 8 | 큐 (Queue) | - | - |
     
