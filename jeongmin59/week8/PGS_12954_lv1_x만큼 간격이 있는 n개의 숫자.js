@@ -16,3 +16,6 @@ function solution(x, n) {
     .fill(x)
     .map((v, i) => (i + 1) * v);
 }
+
+// Array fill 학습하기
+// for문을 벗어나야겠다고 다짐함...
