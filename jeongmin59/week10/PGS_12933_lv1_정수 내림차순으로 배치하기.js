@@ -8,6 +8,7 @@ function solution(n) {
 }
 
 // 다른 사람 풀이
+// 숫자로 푸는 게 더 빠르다고 함
 function solution(n) {
   var nums = [];
   do {
@@ -16,11 +17,11 @@ function solution(n) {
   } while (n > 0);
 
   return nums.sort((a, b) => b - a).join("") * 1;
-  //문자는 느림
+  //문자로 푸는 방법
   return (
     (n + "")
       .split("")
       .sort((a, b) => b - a)
-      .join("") * 1
+      .join("") * 1 // 형 변환
   );
 }
