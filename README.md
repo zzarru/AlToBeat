@@ -75,3 +75,4 @@
 | week 8 | 큐 (Queue) | - | - |
 | week 9 | 트리 (Tree) | - | - |
 | week 10 | 재귀 (Recursion) | - | - |
+| week 11 | 깊이우선탐색 (DFS) | - | - |
