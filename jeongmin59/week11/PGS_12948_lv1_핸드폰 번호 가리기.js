@@ -6,7 +6,7 @@ function solution(phone_number) {
     answer += "*";
   }
   answer += sliced;
-  // console.log(answer);
+  console.log(answer);
   return answer;
 }
 
