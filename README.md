@@ -76,3 +76,4 @@
 | week 9 | 트리 (Tree) | - | - |
 | week 10 | 재귀 (Recursion) | - | - |
 | week 11 | 깊이우선탐색 (DFS) | - | - |
+| week 12 | 완전탐색 (Brute Force) | - | - |
