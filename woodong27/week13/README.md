@@ -2,7 +2,7 @@
 
 ## 240401
 
-[백준 - 주사위 굴리기(G4)](!https://www.acmicpc.net/problem/14499)
+[백준 - 주사위 굴리기(G4)](https://www.acmicpc.net/problem/14499)
 
 주사위가 있을 때 동, 서, 북, 남 각 방위로 굴려진 주사위의 모습을 구하는 것이 필요한 문제였다.
 
