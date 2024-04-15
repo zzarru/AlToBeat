@@ -78,4 +78,5 @@
 | week 11 | 깊이우선탐색 (DFS) | - | - |
 | week 12 | 완전탐색 (Brute Force) | - | - |
 | week 13 | 구현 (Implementation Algorithm)) | - | - |
-| week 14 | 탐욕 (Greedy Algorithm)) | - | - |
+| week 14 | 탐욕 (Greedy Algorithm) | - | - |
+| week 15 | 투 포인터 (Two Pointer) | - | - |
