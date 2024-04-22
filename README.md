@@ -80,4 +80,4 @@
 | week 13 | 구현 (Implementation Algorithm)) | - | - |
 | week 14 | 탐욕 (Greedy Algorithm) | - | - |
 | week 15 | 투 포인터 (Two Pointer) | - | - |
-| week 15 | 시뮬레이션 (Simulation) | - | - |
+| week 16 | 시뮬레이션 (Simulation) | - | - |
