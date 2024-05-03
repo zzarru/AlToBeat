@@ -2,7 +2,7 @@
 
 BFS, 플로이드 워셜, 데이크스트라(다익스트라), 벨만 포드 알고리즘을 사용할 수 있다.
 
-### 데이크스트라(Dijkstra)
+## 데이크스트라(Dijkstra)
 
 한 노드에서 다른 노드까지의 최단거리를 구하는 알고리즘이다.
 
@@ -35,8 +35,9 @@ def dijkstra(start):
 
 dijkstra(s)          
 ```
+<br>
 
-### 벨만 포드(Bellman Ford)
+## 벨만 포드(Bellman Ford)
 
 데이크스트라와 동일하게 한 노드에서 다른 노드까지의 최단거리를 구하지만, 가중치가 음수인 간선이 존재할 때도 사용할 수 있다.
 
@@ -71,8 +72,9 @@ graph = [
 bellman_ford(graph, 1)
 print(distance)  # [inf, 0, -1, 1, 2]
 ```
+<br>
 
-### 플로이드 워셜(Floyd Warshall)
+## 플로이드 워셜(Floyd Warshall)
 
 임의의 두 노드간의 최단거리를 한 번에 구하는 알고리즘이다.
 
