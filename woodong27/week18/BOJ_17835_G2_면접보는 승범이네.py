@@ -3,8 +3,10 @@
 """
 u도시에서 v도시로 가는 단방향 단선이라고 했는데
 왜 graph[v].append(u)인지.. 이해가 안된다.
-
 일단 graph[u].append(v)로 했을 때는 계속 실패했다.
+
+사무실 -> 학생들로 데이크스트라 알고리즘을 실행하기 때문에
+u -> v인 단방향 간선이지만 v.append(u)로 해야 알맞게 나온다.
 """
 
 from heapq import heappush, heappop
