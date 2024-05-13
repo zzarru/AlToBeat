@@ -83,3 +83,4 @@
 | week 16 | 시뮬레이션 (Simulation) | - | - |
 | week 17 | 최단거리 (Shortest Route) | - | - |
 | week 18 | 자유 주제 (Freeeeee) | - | 알투비트 1기 마무리 및 정비 기간 |
+| week 19 | 자유 주제 (Freeeeee) | - | 정비 중... Coming Soon.. 알투비트 2기 |
