@@ -18,9 +18,7 @@ if __name__ == '__main__':
 
     for _ in range(m):
         a, b, c = map(int, enter().strip().split())
-        a -= 1
-        b -= 1
-        distance[a][b] = min(distance[a][b], c)
+        distance[a-1][b-1] = min(distance[a-1][b-1], c)
 
     for k in range(n):
         for i in range(n):
@@ -28,4 +26,6 @@ if __name__ == '__main__':
                 distance[i][j] = min(distance[i][j], distance[i][k] + distance[k][j])
 
     for row in distance:
+        if float('inf') in row:
+            row = [value if value != float('inf') else 0 for value in row]
         print(*row)
