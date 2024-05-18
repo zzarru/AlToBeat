@@ -1,49 +1,44 @@
 # BOJ 1238 G3 파티
 
 """
-x(도착지)에서 각 지점으로 돌아가는 시간을 하고
-각 출발지에서 도착지까지의 시간을 구해서
-왕복에 걸리는 시간이 가장 큰 값을 출력한다.
-
-파이썬의 kwargs를 사용해서 도착지에서 돌아오는 탐색과
-출발지에서 도착지로 이동하는 탐색을 구분했다.
+각 마을 -> x 그래프
+x -> 각 마을 그래프
+두가지 그래프에 대해서 최단거리 탐색을 실행하고
+왕복에 걸리는 시간 합 중 최대값을 출력한다.
 """
 
+import sys
 from heapq import heappush, heappop
 
 
-def dijkstra(start, **kwargs):
-    end = kwargs.get('end', False)
-
+def dijkstra(start, graph):
     q = []
     distance = [float('inf')] * (n + 1)
     distance[start] = 0
     heappush(q, [0, start])
     while q:
         weight, current = heappop(q)
-        if end and current == end:
-            return distance[end]
-
         if distance[current] >= weight:
-            for next_, weight_ in villages[current]:
+            for next_, weight_ in graph[current]:
                 if weight + weight_ < distance[next_]:
                     distance[next_] = weight + weight_
                     heappush(q, [weight + weight_, next_])
 
-    return distance
+    return distance[1:]
 
 
 if __name__ == '__main__':
-    n, m, x = map(int, input().split())
+    enter = sys.stdin.readline
+    n, m, x = map(int, enter().strip().split())
     villages = [[] for _ in range(n + 1)]
+    reverse = [[] for _ in range(n + 1)]
     for _ in range(m):
-        a, b, c = map(int, input().split())
+        a, b, c = map(int, enter().strip().split())
         villages[a].append([b, c])
+        reverse[b].append([a, c])
 
-    from_x = dijkstra(x)
-    answer = 0
-    for i in range(1, n + 1):
-        result = dijkstra(i, end=x)
-        answer = max(answer, from_x[i] + result)
+    from_x = dijkstra(x, villages)
+    to_x = dijkstra(x, reverse)
 
+    answer = max([value1 + value2 for value1, value2 in zip(from_x, to_x)])
     print(answer)
