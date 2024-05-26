@@ -90,3 +90,4 @@
 | 주차 | 문제 | 문제 주소 | 비고 |
 | --- | --- | --- | --- |
 | week 20 | BOJ 11723 S5 집합 |  https://www.acmicpc.net/problem/11723 | - |
+| week 21 | BOJ 1620 S4 나는야 포켓몬 마스터 이다솜 | https://www.acmicpc.net/problem/1620 | - |
