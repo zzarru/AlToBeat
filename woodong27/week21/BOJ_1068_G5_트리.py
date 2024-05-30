@@ -34,4 +34,5 @@ if __name__ == '__main__':
     answer = 0
     if delete != root:
         dfs(root)
-        sys.stdout.write(f'{answer}\n')
+        
+    sys.stdout.write(f'{answer}\n')
