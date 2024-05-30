@@ -21,23 +21,17 @@ if __name__ == '__main__':
     enter = sys.stdin.readline
     n = int(enter())
     parents = list(map(int, enter().split()))
-
+    delete = int(enter())
+    
     tree = [[] for _ in range(n)]
     root = 0
     for i in range(n):
         if parents[i] == -1:
             root = i
-        else:
+        elif i != delete:
             tree[parents[i]].append(i)
-
-    delete = int(enter())
+            
     answer = 0
-    if delete == root:
-        sys.stdout.write(f'{answer}\n')
-    else:
-        for i in range(n):
-            if delete in tree[i]:
-                tree[i].remove(delete)
-
+    if delete != root:
         dfs(root)
         sys.stdout.write(f'{answer}\n')
