@@ -5,8 +5,6 @@ chance를 썼을 때와 쓰지 않았을 때로 구분해서
 visited를 체크하고 bfs 탐색을 진행했다.
 """
 
-# BOJ 31804 G4 Chance!
-
 import sys
 from collections import deque
 
