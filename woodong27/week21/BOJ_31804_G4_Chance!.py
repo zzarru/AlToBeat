@@ -5,6 +5,8 @@ chance를 썼을 때와 쓰지 않았을 때로 구분해서
 visited를 체크하고 bfs 탐색을 진행했다.
 """
 
+# BOJ 31804 G4 Chance!
+
 import sys
 from collections import deque
 
@@ -26,22 +28,13 @@ def bfs(start):
                 visited[next3][1] = visited[current][0] + 1
                 q.append([next3, 1])
 
-            if next1 <= b and not visited[next1][0]:
-                visited[next1][0] = visited[current][0] + 1
-                q.append([next1, 0])
+        if next1 <= b and not visited[next1][is_chance_used]:
+            visited[next1][is_chance_used] = visited[current][is_chance_used] + 1
+            q.append([next1, is_chance_used])
 
-            if next2 <= b and not visited[next2][0]:
-                visited[next2][0] = visited[current][0] + 1
-                q.append([next2, 0])
-
-        else:
-            if next1 <= b and not visited[next1][1]:
-                visited[next1][1] = visited[current][1] + 1
-                q.append([next1, 1])
-
-            if next2 <= b and not visited[next2][1]:
-                visited[next2][1] = visited[current][1] + 1
-                q.append([next2, 1])
+        if next2 <= b and not visited[next2][is_chance_used]:
+            visited[next2][is_chance_used] = visited[current][is_chance_used] + 1
+            q.append([next2, is_chance_used])
 
 
 if __name__ == '__main__':
