@@ -91,3 +91,5 @@
 | --- | --- | --- | --- |
 | week 20 | BOJ 11723 S5 집합 |  https://www.acmicpc.net/problem/11723 | - |
 | week 21 | BOJ 1620 S4 나는야 포켓몬 마스터 이다솜 | https://www.acmicpc.net/problem/1620 | - |
+| week 22 | BOJ 1764 S4 듣보잡 | https://www.acmicpc.net/problem/1764 | - |
+| week 23 | BOJ 11047 S4 동전 0 | https://www.acmicpc.net/problem/11047 | - |
