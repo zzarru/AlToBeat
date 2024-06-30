@@ -95,3 +95,4 @@
 | week 23 | BOJ 11047 S4 동전 0 | https://www.acmicpc.net/problem/11047 | - |
 | week 24 | BOJ 2579 S3 계단 오르기 | https://www.acmicpc.net/problem/2579 | - |
 | week 25 | BOJ 9095 S3 1, 2, 3 더하기 | https://www.acmicpc.net/problem/9095 | - |
+| week 26 | BOJ 2805 S2 나무 자르기 | https://www.acmicpc.net/problem/2805 | - |
